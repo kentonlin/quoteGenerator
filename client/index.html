@@ -10,7 +10,8 @@
 <body ng-app="App">
 	<h1> Quote of the Day </h1>	
 	<div ng-controller="myController"> 
-		<p> {{ data }} </p>
+		<button ng-click="quote()"> Get Quote </button>
+		<p> {{ data.quo }} </p>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
