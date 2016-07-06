@@ -1,20 +1,41 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>
 		Quote App
 	</title>
-</head>
+	<link rel="stylesheet", type="text/css" href="styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yellowtail" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma" />
+	</head>
 
 <body ng-app="App">
 	<h1> Quote of the Day </h1>	
-	<div ng-controller="myController"> 
-		<button ng-click="quote()"> Get Quote </button>
-		<p> {{ data.quo }} </p>
+	<div class="GetQ" ng-controller="myController"> 
+		<button class="GetB" ng-click="quote()"> Get Quote </button>
+		<p> {{ data.quote }} </p>
+		<p> {{ data.author }} </p>
+	</div>
+
+	<div class="QuoteList" ng-controller="myController">
+		<button class='listbutton' ng-click="addQuote()"> Save Quote </button>
+		<div class="list" ng-repeat="item in data.list track by $index"> 
+			<p> {{ item.quote }} </p>
+			<p> {{ item.author }} </p>
+			<button class="removeQuote" ng-click="removeItem(item)"> Remove </button>
+		</div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
 	<script src="app/app.js"></script>
 </body>
 </html>
+<!-- ROUTER ATTEMPT -->
+
+<!-- body> 
+	<div ng-view></div>
+</body> -->
+
+<!--  ROUTER ATTEMPT -->
