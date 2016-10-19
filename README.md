@@ -5,7 +5,7 @@
 * Save the quote and view saved quotes
 
 ##Technologies
-*Angular
-*Node
-*Express
-*HTML/CSS
+* Angular
+* Node
+* Express
+* HTML/CSS
